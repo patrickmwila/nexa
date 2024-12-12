@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1 class="display-4 mb-4">Welcome to Nexa Solutions Limited</h1>
+        <p class="lead mb-4">Empowering businesses through innovative technology solutions</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Get Started</a>
+    </div>
+</section>
+
+<!-- Who We Are Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title">
+            <h2>Who We Are</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <p class="lead">
+                    Nexa Solutions Limited is a leading technology company dedicated to providing innovative IT solutions
+                    that drive business growth and efficiency. With our expertise and commitment to excellence,
+                    we help organizations navigate the digital landscape and achieve their strategic objectives.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Vision and Mission Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-eye service-icon"></i>
+                        <h3 class="card-title">Our Vision</h3>
+                        <p class="card-text">
+                            To be the leading provider of innovative technology solutions, empowering businesses
+                            to thrive in the digital age.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-bullseye service-icon"></i>
+                        <h3 class="card-title">Our Mission</h3>
+                        <p class="card-text">
+                            To deliver exceptional IT services and solutions that drive business success through
+                            innovation, reliability, and customer-focused excellence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Values Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Core Values</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-star service-icon"></i>
+                        <h4>Excellence</h4>
+                        <p>Striving for the highest quality in everything we do</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-check-circle service-icon"></i>
+                        <h4>Accountability</h4>
+                        <p>Taking responsibility for our actions and commitments</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-shield-alt service-icon"></i>
+                        <h4>Integrity</h4>
+                        <p>Maintaining highest ethical standards in all dealings</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-users service-icon"></i>
+                        <h4>Customer-Centric</h4>
+                        <p>Putting our clients' needs at the heart of our service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="section-padding bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Transform Your Business?</h2>
+        <p class="lead mb-4">Let us help you achieve your technology goals with our expert solutions.</p>
+        <a href="{{ url_for('services') }}" class="btn btn-light btn-lg me-3">Explore Services</a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Contact Us</a>
+    </div>
+</section>
+{% endblock %}

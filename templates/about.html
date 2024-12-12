@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<!-- About Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1 class="display-4 mb-4">About Nexa Solutions</h1>
+        <p class="lead">Delivering Excellence in Technology Solutions</p>
+    </div>
+</section>
+
+<!-- What We Stand For Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title">
+            <h2>What We Stand For</h2>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h3 class="mb-4">Our Vision</h3>
+                <p class="lead">
+                    To be the leading provider of innovative technology solutions, empowering businesses
+                    to thrive in the digital age.
+                </p>
+                <h3 class="mb-4 mt-5">Our Mission</h3>
+                <p class="lead">
+                    To deliver exceptional IT services and solutions that drive business success through
+                    innovation, reliability, and customer-focused excellence.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/about-vision.jpg') }}" alt="Vision and Mission" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Values Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Values</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-star service-icon me-3"></i>
+                            <h3 class="card-title mb-0">Excellence</h3>
+                        </div>
+                        <p class="card-text">
+                            We are committed to delivering the highest quality solutions and services. Our team
+                            continuously strives for excellence in every project we undertake, ensuring that we
+                            exceed our clients' expectations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle service-icon me-3"></i>
+                            <h3 class="card-title mb-0">Accountability</h3>
+                        </div>
+                        <p class="card-text">
+                            We take full responsibility for our actions and commitments. Our team stands behind
+                            our work and ensures that we deliver on our promises, maintaining transparency
+                            throughout our engagements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-shield-alt service-icon me-3"></i>
+                            <h3 class="card-title mb-0">Integrity</h3>
+                        </div>
+                        <p class="card-text">
+                            We conduct our business with the highest ethical standards. Our relationships with
+                            clients, partners, and team members are built on trust, honesty, and transparency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-users service-icon me-3"></i>
+                            <h3 class="card-title mb-0">Customer-Centricity</h3>
+                        </div>
+                        <p class="card-text">
+                            Our clients are at the heart of everything we do. We focus on understanding their
+                            unique needs and delivering solutions that create lasting value for their businesses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Leadership</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p class="lead mb-5">
+                    Our leadership team brings together decades of experience in technology and business,
+                    guiding Nexa Solutions towards excellence and innovation in everything we do.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
