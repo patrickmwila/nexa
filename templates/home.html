@@ -4,118 +4,202 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero position-relative">
     <div class="container">
-        <h1 class="display-4 mb-4">Welcome to Nexa Solutions Limited</h1>
-        <p class="lead mb-4">Empowering businesses through innovative technology solutions</p>
-        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Get Started</a>
+        <div class="row align-items-center">
+            <div class="col-lg-6 fade-in">
+                <h1 class="display-4 mb-4">Transform Your Business with Technology</h1>
+                <p class="lead mb-4">Nexa Solutions delivers innovative IT services that drive growth, efficiency, and success for forward-thinking businesses.</p>
+                <div class="d-flex gap-3">
+                    <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Get Started</a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg">Explore Services</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <img src="{{ url_for('static', filename='images/hero-bg.jpg') }}" alt="Technology Solutions" class="img-fluid rounded-3 shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Grid -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-primary bg-opacity-10 p-3 me-3">
+                                <i class="fas fa-rocket text-primary"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Fast Implementation</h3>
+                        </div>
+                        <p class="text-muted">Quick deployment of solutions that keep your business moving forward.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-success bg-opacity-10 p-3 me-3">
+                                <i class="fas fa-shield-alt text-success"></i>
+                            </div>
+                            <h3 class="h5 mb-0">Enterprise Security</h3>
+                        </div>
+                        <p class="text-muted">Advanced security measures to protect your valuable business data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-info bg-opacity-10 p-3 me-3">
+                                <i class="fas fa-clock text-info"></i>
+                            </div>
+                            <h3 class="h5 mb-0">24/7 Support</h3>
+                        </div>
+                        <p class="text-muted">Round-the-clock technical support whenever you need assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Who We Are Section -->
 <section class="section-padding">
     <div class="container">
-        <div class="section-title">
-            <h2>Who We Are</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <p class="lead">
-                    Nexa Solutions Limited is a leading technology company dedicated to providing innovative IT solutions
-                    that drive business growth and efficiency. With our expertise and commitment to excellence,
-                    we help organizations navigate the digital landscape and achieve their strategic objectives.
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="{{ url_for('static', filename='images/team-hero.jpg') }}" alt="Our Team" class="img-fluid rounded-3 shadow-lg">
+            </div>
+            <div class="col-lg-6 ps-lg-5">
+                <div class="section-title text-start">
+                    <h2>Who We Are</h2>
+                </div>
+                <p class="lead mb-4">
+                    Nexa Solutions is a leading technology company dedicated to providing innovative IT solutions
+                    that drive business growth and efficiency.
                 </p>
+                <div class="d-flex mb-4">
+                    <div class="me-4">
+                        <h3 class="h2 text-primary mb-0">10+</h3>
+                        <p class="text-muted">Years Experience</p>
+                    </div>
+                    <div class="me-4">
+                        <h3 class="h2 text-primary mb-0">200+</h3>
+                        <p class="text-muted">Projects Completed</p>
+                    </div>
+                    <div>
+                        <h3 class="h2 text-primary mb-0">50+</h3>
+                        <p class="text-muted">Expert Team</p>
+                    </div>
+                </div>
+                <a href="{{ url_for('about') }}" class="btn btn-primary">Learn More</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Vision and Mission Section -->
+<!-- Services Preview -->
 <section class="section-padding bg-light">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-eye service-icon"></i>
-                        <h3 class="card-title">Our Vision</h3>
-                        <p class="card-text">
-                            To be the leading provider of innovative technology solutions, empowering businesses
-                            to thrive in the digital age.
-                        </p>
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p class="lead text-muted">Comprehensive IT solutions tailored to your business needs</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 fade-in">
+                <div class="card service-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="{{ url_for('static', filename='images/software-dev.jpg') }}" alt="Software Development" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                        <h4>Software Development</h4>
+                        <p class="text-muted">Custom solutions for your unique business needs</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-bullseye service-icon"></i>
-                        <h3 class="card-title">Our Mission</h3>
-                        <p class="card-text">
-                            To deliver exceptional IT services and solutions that drive business success through
-                            innovation, reliability, and customer-focused excellence.
-                        </p>
+            <div class="col-md-6 col-lg-3 fade-in">
+                <div class="card service-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="{{ url_for('static', filename='images/seo.jpg') }}" alt="SEO Services" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                        <h4>SEO Services</h4>
+                        <p class="text-muted">Boost your online visibility and traffic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 fade-in">
+                <div class="card service-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="{{ url_for('static', filename='images/support.jpg') }}" alt="System Support" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                        <h4>System Support</h4>
+                        <p class="text-muted">24/7 technical assistance and maintenance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 fade-in">
+                <div class="card service-card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <img src="{{ url_for('static', filename='images/data.jpg') }}" alt="Data Services" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                        <h4>Data Services</h4>
+                        <p class="text-muted">Secure data migration and management</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="text-center mt-5">
+            <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg">View All Services</a>
+        </div>
     </div>
 </section>
 
-<!-- Core Values Section -->
-<section class="section-padding">
+<!-- Call to Action -->
+<section class="section-padding" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color))">
+    <div class="container text-center text-white">
+        <h2 class="display-4 mb-4">Ready to Transform Your Business?</h2>
+        <p class="lead mb-4">Join hundreds of businesses that trust Nexa Solutions for their technology needs</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Get Started</a>
+            <a href="{{ url_for('why_choose_us') }}" class="btn btn-outline-light btn-lg">Why Choose Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- Clients Section -->
+<section class="section-padding bg-light">
     <div class="container">
         <div class="section-title">
-            <h2>Our Core Values</h2>
+            <h2>Trusted by Industry Leaders</h2>
+            <p class="lead text-muted">Companies that rely on our expertise</p>
         </div>
-        <div class="row">
-            <div class="col-md-3 mb-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <i class="fas fa-star service-icon"></i>
-                        <h4>Excellence</h4>
-                        <p>Striving for the highest quality in everything we do</p>
+        <div class="row align-items-center justify-content-center g-4">
+            <div class="col-6 col-md-4 col-lg-2">
+                <div class="card border-0 bg-transparent">
+                    <div class="card-body text-center">
+                        <i class="fas fa-building display-4 text-muted"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <i class="fas fa-check-circle service-icon"></i>
-                        <h4>Accountability</h4>
-                        <p>Taking responsibility for our actions and commitments</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <i class="fas fa-shield-alt service-icon"></i>
-                        <h4>Integrity</h4>
-                        <p>Maintaining highest ethical standards in all dealings</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <i class="fas fa-users service-icon"></i>
-                        <h4>Customer-Centric</h4>
-                        <p>Putting our clients' needs at the heart of our service</p>
-                    </div>
-                </div>
-            </div>
+            <!-- Repeat for more client logos -->
         </div>
     </div>
 </section>
+{% endblock %}
 
-<!-- Call to Action Section -->
-<section class="section-padding bg-primary text-white">
-    <div class="container text-center">
-        <h2 class="mb-4">Ready to Transform Your Business?</h2>
-        <p class="lead mb-4">Let us help you achieve your technology goals with our expert solutions.</p>
-        <a href="{{ url_for('services') }}" class="btn btn-light btn-lg me-3">Explore Services</a>
-        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Contact Us</a>
-    </div>
-</section>
+{% block extra_css %}
+<style>
+    .hero {
+        background-attachment: fixed;
+    }
+    
+    .service-card img {
+        transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover img {
+        transform: scale(1.1);
+    }
+</style>
 {% endblock %}

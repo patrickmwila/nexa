@@ -163,11 +163,14 @@
 </section>
 
 <!-- Call to Action -->
-<section class="section-padding bg-primary text-white">
-    <div class="container text-center">
-        <h2 class="mb-4">Ready to Transform Your Business?</h2>
+<section class="section-padding" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color))">
+    <div class="container text-center text-white">
+        <h2 class="display-4 mb-4">Ready to Transform Your Business?</h2>
         <p class="lead mb-4">Let's discuss how we can help you achieve your technology goals.</p>
-        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Get Started Today</a>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Get Started Today</a>
+            <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg">Our Services</a>
+        </div>
     </div>
 </section>
 {% endblock %}
