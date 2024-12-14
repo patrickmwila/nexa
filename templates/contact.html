@@ -5,9 +5,24 @@
 {% block content %}
 <!-- Contact Hero Section -->
 <section class="hero">
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
     <div class="container">
-        <h1 class="display-4 mb-4">Contact Us</h1>
-        <p class="lead">Get in Touch with Our Team</p>
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <h1 class="mb-4">Get in Touch</h1>
+                <p class="mb-4">Ready to transform your business? Reach out to us for a consultation and let's discuss how we can help you achieve your goals.</p>
+                <div class="d-flex gap-3">
+                    <a href="#contact-form" class="btn btn-primary">Send Message</a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-light">Our Services</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                <img src="{{ url_for('static', filename='images/hero/contact-illustration.png') }}" alt="Contact Us" class="img-fluid hero-illustration">
+            </div>
+        </div>
     </div>
 </section>
 
@@ -22,16 +37,16 @@
                         <h3 class="card-title mb-4">Contact Information</h3>
                         <div class="mb-4">
                             <h5><i class="fas fa-map-marker-alt me-2 text-primary"></i>Address</h5>
-                            <p class="ms-4">Nexa Solutions Limited<br>Lusaka, Zambia</p>
+                            <p class="ms-4">Plot No. 11653 Off Akashabatwa Road Olympia<br>Lusaka 10101, Zambia</p>
                         </div>
                         <div class="mb-4">
                             <h5><i class="fas fa-envelope me-2 text-primary"></i>Email</h5>
-                            <p class="ms-4">info@nexasolutions.com</p>
+                            <p class="ms-4">communications.nexa@gmail.com</p>
                         </div>
                         <div class="mb-4">
                             <h5><i class="fas fa-globe me-2 text-primary"></i>Business Registration</h5>
                             <p class="ms-4">
-                                <a href="http://www.pacra.org.zm" target="_blank" rel="noopener noreferrer">
+                                <a href="{{ url_for('static', filename='assets/nexa-profile.pdf') }}" target="_blank" rel="noopener noreferrer">
                                     View Registration
                                 </a>
                             </p>
@@ -40,7 +55,7 @@
                             <h5><i class="fas fa-clock me-2 text-primary"></i>Business Hours</h5>
                             <p class="ms-4">
                                 Monday - Friday: 8:00 AM - 5:00 PM<br>
-                                Saturday: 9:00 AM - 1:00 PM<br>
+                                Saturday: Closed<br>
                                 Sunday: Closed
                             </p>
                         </div>
@@ -117,8 +132,7 @@
             <div class="col-lg-8 text-center">
                 <h3 class="mb-4">Visit Our Office</h3>
                 <div class="ratio ratio-16x9">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15323.218824870441!2d28.27934015!3d-15.4246135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1940f343efb147c5%3A0x6c3f582783d24e63!2sLusaka%2C%20Zambia!5e0!3m2!1sen!2s!4v1639494145776!5m2!1sen!2s" 
-                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3846.8490134316535!2d28.30173692605602!3d-15.384661313001446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2szm!4v1734176369500!5m2!1sen!2szm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

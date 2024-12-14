@@ -20,8 +20,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('home') }}">
-                <span class="text-primary fw-bold">Nexa</span> Solutions
+            <a class="navbar-brand d-flex align-items-center" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/nexa-logo.svg') }}" alt="Nexa Solutions Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -71,67 +71,46 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h5 class="footer-title">About Nexa Solutions</h5>
-                    <p class="text-white-50">
-                        Empowering businesses through innovative technology solutions. We help organizations navigate
-                        the digital landscape and achieve their strategic objectives.
-                    </p>
-                    <div class="social-links mt-4">
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <img src="{{ url_for('static', filename='images/nexa-logo.svg') }}" alt="Nexa Solutions Logo" class="mb-4" style="height: 40px;">
+                    <p class="mb-4">Empowering businesses with innovative technology solutions for a digital future.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15iHjg2h1q/" class="me-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-6">
                     <h5 class="footer-title">Quick Links</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="{{ url_for('about') }}">About Us</a></li>
-                        <li><a href="{{ url_for('services') }}">Services</a></li>
-                        <li><a href="{{ url_for('why_choose_us') }}">Why Choose Us</a></li>
-                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="{{ url_for('home') }}">Home</a></li>
+                        <li class="mb-3"><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li class="mb-3"><a href="{{ url_for('services') }}">Services</a></li>
+                        <li class="mb-3"><a href="{{ url_for('contact') }}">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <h5 class="footer-title">Our Services</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="{{ url_for('services') }}#software">Software Development</a></li>
-                        <li><a href="{{ url_for('services') }}#seo">Search Engine Optimization</a></li>
-                        <li><a href="{{ url_for('services') }}#support">System Support</a></li>
-                        <li><a href="{{ url_for('services') }}#consulting">IT Consulting</a></li>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#">Web Development</a></li>
+                        <li class="mb-3"><a href="#">Mobile Apps</a></li>
+                        <li class="mb-3"><a href="#">Cloud Solutions</a></li>
+                        <li class="mb-3"><a href="#">IT Consulting</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h5 class="footer-title">Contact Info</h5>
-                    <ul class="list-unstyled footer-contact">
-                        <li>
-                            <i class="fas fa-map-marker-alt me-2"></i>
-                            Lusaka, Zambia
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope me-2"></i>
-                            <a href="mailto:info@nexasolutions.com">info@nexasolutions.com</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-globe me-2"></i>
-                            <a href="http://www.pacra.org.zm" target="_blank">Business Registration</a>
-                        </li>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> Plot No. 11653 Off Akashabatwa Road Olympia Lusaka 10101 Lusaka, Zambia</li>
+                        <li class="mb-3"><i class="fas fa-phone me-2"></i> +260 961 043 515</li>
+                        <li class="mb-3"><i class="fas fa-envelope me-2"></i> communications.nexa@gmail.com</li>
                     </ul>
                 </div>
             </div>
-            <hr class="mt-4 mb-3 border-secondary">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0 text-white-50">&copy; {{ year }} Nexa Solutions Limited. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0 text-white-50">Designed with <i class="fas fa-heart text-danger"></i> by Nexa Solutions</p>
-                </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; {{ year }} Nexa Solutions Limited. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -141,6 +120,8 @@
             once: true
         });
     </script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     {% block extra_js %}{% endblock %}
 </body>
 </html>

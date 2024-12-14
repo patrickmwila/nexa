@@ -3,16 +3,30 @@
 {% block title %}Why Choose Us{% endblock %}
 
 {% block content %}
-<!-- Why Choose Us Hero Section -->
 <section class="hero">
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
     <div class="container">
-        <h1 class="display-4 mb-4">Why Choose Nexa Solutions?</h1>
-        <p class="lead">Your Trusted Partner in Technology Excellence</p>
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <h1 class="mb-4">Why Partner With Us</h1>
+                <p class="mb-4">Experience excellence in IT solutions with our proven track record, expert team, and commitment to delivering innovative technology solutions that drive your success.</p>
+                <div class="d-flex gap-3">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Start Partnership</a>
+                    <a href="#benefits" class="btn btn-outline-light">See Benefits</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                <img src="{{ url_for('static', filename='images/hero/why-choose-illustration.png') }}" alt="Why Choose Nexa Solutions" class="img-fluid hero-illustration">
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Key Benefits Section -->
-<section class="section-padding">
+<section class="section-padding" id="benefits">
     <div class="container">
         <div class="row">
             <!-- Top-tier Expertise -->

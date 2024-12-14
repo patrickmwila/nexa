@@ -27,15 +27,16 @@ app.config['ADMIN_EMAIL'] = os.getenv('ADMIN_EMAIL')
 bootstrap = Bootstrap5(app)
 mail = Mail(app)
 
+# Context processor for current year
+@app.context_processor
+def inject_year():
+    return {'year': datetime.now().year}
+
 class ContactForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
     subject = StringField('Subject', validators=[DataRequired()])
     message = TextAreaField('Message', validators=[DataRequired()])
-
-@app.context_processor
-def inject_year():
-    return {'year': datetime.now().year}
 
 def send_contact_email(form_data):
     """Send contact form data via email."""

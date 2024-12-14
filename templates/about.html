@@ -5,9 +5,24 @@
 {% block content %}
 <!-- About Hero Section -->
 <section class="hero">
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
     <div class="container">
-        <h1 class="display-4 mb-4">About Nexa Solutions</h1>
-        <p class="lead">Delivering Excellence in Technology Solutions</p>
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <h1 class="mb-4">Our Journey of Innovation</h1>
+                <p class="mb-4">Discover how we've been revolutionizing businesses through cutting-edge technology solutions and unwavering commitment to excellence.</p>
+                <div class="d-flex gap-3">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact Us</a>
+                    <a href="{{ url_for('why_choose_us') }}" class="btn btn-outline-light">Why Choose Us</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                <img src="{{ url_for('static', filename='images/hero/about-illustration.png') }}" alt="About Nexa Solutions" class="img-fluid hero-illustration">
+            </div>
+        </div>
     </div>
 </section>
 
