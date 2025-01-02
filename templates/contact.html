@@ -3,24 +3,32 @@
 {% block title %}Contact Us{% endblock %}
 
 {% block content %}
-<!-- Contact Hero Section -->
+<!-- Hero Section -->
 <section class="hero">
-    <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
+    <div class="hero-background">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
     </div>
-    <div class="container">
+    <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <h1 class="mb-4">Get in Touch</h1>
-                <p class="mb-4">Ready to transform your business? Reach out to us for a consultation and let's discuss how we can help you achieve your goals.</p>
-                <div class="d-flex gap-3">
-                    <a href="#contact-form" class="btn btn-primary">Send Message</a>
-                    <a href="{{ url_for('services') }}" class="btn btn-outline-light">Our Services</a>
-                </div>
+                <span class="hero-badge mb-3">Contact Us</span>
+                <h1 class="mb-4">Let's Start a Conversation</h1>
+                <p class="mb-4">Ready to transform your business with innovative IT solutions? Get in touch with our team of experts today.</p>
             </div>
             <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
-                <img src="{{ url_for('static', filename='images/hero/contact-illustration.png') }}" alt="Contact Us" class="img-fluid hero-illustration">
+                <div class="hero-image-wrapper">
+                    <img src="{{ url_for('static', filename='images/hero/contact-illustration.png') }}" alt="Contact Us" class="hero-illustration">
+                    <div class="tech-stack">
+                        <div class="tech-icon"><i class="fas fa-comments"></i></div>
+                        <div class="tech-icon"><i class="fas fa-headset"></i></div>
+                        <div class="tech-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="tech-icon"><i class="fas fa-phone-alt"></i></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -125,19 +133,6 @@
     </div>
 </section>
 
-<!-- Map Section -->
-<section class="section-padding bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h3 class="mb-4">Visit Our Office</h3>
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3846.8490134316535!2d28.30173692605602!3d-15.384661313001446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2szm!4v1734176369500!5m2!1sen!2szm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 {% endblock %}
 
 {% block extra_css %}

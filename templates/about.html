@@ -4,23 +4,36 @@
 
 {% block content %}
 <!-- About Hero Section -->
+<!-- Hero Section -->
 <section class="hero">
-    <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
+    <div class="hero-background">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
     </div>
-    <div class="container">
+    <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <h1 class="mb-4">Our Journey of Innovation</h1>
-                <p class="mb-4">Discover how we've been revolutionizing businesses through cutting-edge technology solutions and unwavering commitment to excellence.</p>
-                <div class="d-flex gap-3">
-                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact Us</a>
-                    <a href="{{ url_for('why_choose_us') }}" class="btn btn-outline-light">Why Choose Us</a>
+                <span class="hero-badge mb-3">About Nexa Solutions</span>
+                <h1 class="mb-4">Innovating Tomorrow's Technology Solutions</h1>
+                <p class="mb-4">We are a team of passionate technology experts dedicated to transforming businesses through innovative IT solutions and strategic consulting.</p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Work With Us</a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-light">Our Services</a>
                 </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
-                <img src="{{ url_for('static', filename='images/hero/about-illustration.png') }}" alt="About Nexa Solutions" class="img-fluid hero-illustration">
+                <div class="hero-image-wrapper">
+                    <img src="{{ url_for('static', filename='images/hero/about-illustration.png') }}" alt="About Nexa Solutions" class="hero-illustration">
+                    <div class="tech-stack">
+                        <div class="tech-icon"><i class="fas fa-users"></i></div>
+                        <div class="tech-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="tech-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="tech-icon"><i class="fas fa-globe"></i></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

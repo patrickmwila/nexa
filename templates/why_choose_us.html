@@ -3,23 +3,36 @@
 {% block title %}Why Choose Us{% endblock %}
 
 {% block content %}
+<!-- Hero Section -->
 <section class="hero">
-    <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
+    <div class="hero-background">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
     </div>
-    <div class="container">
+    <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <h1 class="mb-4">Why Partner With Us</h1>
-                <p class="mb-4">Experience excellence in IT solutions with our proven track record, expert team, and commitment to delivering innovative technology solutions that drive your success.</p>
-                <div class="d-flex gap-3">
-                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Start Partnership</a>
-                    <a href="#benefits" class="btn btn-outline-light">See Benefits</a>
+                <span class="hero-badge mb-3">Why Choose Nexa</span>
+                <h1 class="mb-4">Excellence in Every Digital Solution</h1>
+                <p class="mb-4">Discover why leading businesses trust Nexa Solutions for their digital transformation journey and IT service needs.</p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Partner With Us</a>
+                    <a href="#advantages" class="btn btn-outline-light">Our Advantages</a>
                 </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
-                <img src="{{ url_for('static', filename='images/hero/why-choose-illustration.png') }}" alt="Why Choose Nexa Solutions" class="img-fluid hero-illustration">
+                <div class="hero-image-wrapper">
+                    <img src="{{ url_for('static', filename='images/hero/services-illustration.png') }}" alt="Why Choose Us" class="hero-illustration">
+                    <div class="tech-stack">
+                        <div class="tech-icon"><i class="fas fa-award"></i></div>
+                        <div class="tech-icon"><i class="fas fa-handshake"></i></div>
+                        <div class="tech-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="tech-icon"><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -176,15 +189,4 @@
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="section-padding" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color))">
-    <div class="container text-center text-white">
-        <h2 class="display-4 mb-4">Ready to Transform Your Business?</h2>
-        <p class="lead mb-4">Let's discuss how we can help you achieve your technology goals.</p>
-        <div class="d-flex justify-content-center gap-3">
-            <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">Get Started Today</a>
-            <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg">Our Services</a>
-        </div>
-    </div>
-</section>
 {% endblock %}
